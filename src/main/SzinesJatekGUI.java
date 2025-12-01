@@ -1,17 +1,19 @@
 package main;
 
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class SzinesJatekGUI extends javax.swing.JFrame {
 
     public SzinesJatekGUI() {
         initComponents();
+        kezdoallapot();
     }
 
-    String[] oszlop1 = {"p", "p", "p", "-", "-"};
-    String[] oszlop2 = {"k", "k", "k", "-", "-"};
-    String[] oszlop3 = {"z", "z", "z", "-", "-"};
-    String[] oszlop4 = {"-", "-", "-", "-", "-"};
+    int[] oszlop1 = {1, 1, 1, 0, 0};
+    int[] oszlop2 = {2, 2, 2, 0, 0};
+    int[] oszlop3 = {3, 3, 3, 0, 0};
+    int[] oszlop4 = {0, 0, 0, 0, 0};
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -57,14 +59,6 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
         pnlMegjelenites.setBorder(javax.swing.BorderFactory.createTitledBorder("Megjelenítés"));
 
         lblLepesek.setText("Lépések: 0");
-
-        lblAktivO1.setText("jLabel1");
-
-        lblAktivO2.setText("jLabel1");
-
-        lblAktivO3.setText("jLabel1");
-
-        lblAktivO4.setText("jLabel1");
 
         pnlO1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlO1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -270,23 +264,24 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
                         .addGap(87, 87, 87)
                         .addComponent(lblLepesek))
                     .addGroup(pnlMegjelenitesLayout.createSequentialGroup()
-                        .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pnlO1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblAktivO1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(pnlO1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblAktivO1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlMegjelenitesLayout.createSequentialGroup()
                                 .addComponent(pnlO2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(pnlO3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(pnlO4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createSequentialGroup()
-                                .addComponent(lblAktivO2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblAktivO3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblAktivO4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(pnlMegjelenitesLayout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(lblAktivO2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(lblAktivO3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblAktivO4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(87, 87, 87))
         );
         pnlMegjelenitesLayout.setVerticalGroup(
@@ -294,12 +289,11 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblAktivO4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblAktivO3)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblAktivO2)
-                        .addComponent(lblAktivO1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                    .addComponent(lblAktivO3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblAktivO1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblAktivO4, javax.swing.GroupLayout.DEFAULT_SIZE, 13, Short.MAX_VALUE)
+                    .addComponent(lblAktivO2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlO1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlO2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -320,7 +314,12 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
         });
         getContentPane().add(btnKilepes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 368, -1, -1));
 
-        btnUjJatek.setText("Új játék");
+        btnUjJatek.setText("Kezdés");
+        btnUjJatek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUjJatekActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnUjJatek, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 368, -1, -1));
 
         pack();
@@ -328,15 +327,15 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlO1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO1MouseReleased
-        lblLepesek.setText("1");
+        lblAktivO1.setText(oszlop1[4] + "");
     }//GEN-LAST:event_pnlO1MouseReleased
 
     private void pnlO2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO2MouseReleased
-        lblLepesek.setText("2");
+        lblAktivO2.setText(oszlop1[4] + "");
     }//GEN-LAST:event_pnlO2MouseReleased
 
     private void pnlO3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO3MouseReleased
-        lblLepesek.setText("3");
+        lblAktivO3.setText(oszlop1[4] + "");
     }//GEN-LAST:event_pnlO3MouseReleased
 
     private void pnlO4ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_pnlO4ComponentResized
@@ -344,12 +343,27 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlO4ComponentResized
 
     private void pnlO4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO4MouseReleased
-        lblLepesek.setText("4");
+        lblAktivO4.setText(oszlop1[4] + "");
     }//GEN-LAST:event_pnlO4MouseReleased
 
     private void btnKilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKilepesActionPerformed
         kilepes();
     }//GEN-LAST:event_btnKilepesActionPerformed
+
+    private void btnUjJatekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUjJatekActionPerformed
+
+        int[] kevert = {1, 1, 1, 2, 2, 2, 3, 3, 3};
+        szamKeveres(kevert);
+        lblO1S3.setText(kevert[0] + "");
+        lblO1S4.setText(kevert[1] + "");
+        lblO1S5.setText(kevert[2] + "");
+        lblO2S3.setText(kevert[3] + "");
+        lblO2S4.setText(kevert[4] + "");
+        lblO2S5.setText(kevert[5] + "");
+        lblO3S3.setText(kevert[6] + "");
+        lblO3S4.setText(kevert[7] + "");
+        lblO3S5.setText(kevert[8] + "");
+    }//GEN-LAST:event_btnUjJatekActionPerformed
 
     public static void main(String args[]) {
 
@@ -366,6 +380,29 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
         if (valasz == JOptionPane.YES_OPTION) {
             System.exit(0);
         }
+    }
+
+    private void kezdoallapot() {
+        lblO1S1.setText(oszlop1[4] + "");
+        lblO1S2.setText(oszlop1[3] + "");
+        lblO1S3.setText(oszlop1[2] + "");
+        lblO1S4.setText(oszlop1[1] + "");
+        lblO1S5.setText(oszlop1[0] + "");
+        lblO2S1.setText(oszlop2[4] + "");
+        lblO2S2.setText(oszlop2[3] + "");
+        lblO2S3.setText(oszlop2[2] + "");
+        lblO2S4.setText(oszlop2[1] + "");
+        lblO2S5.setText(oszlop2[0] + "");
+        lblO3S1.setText(oszlop3[4] + "");
+        lblO3S2.setText(oszlop3[3] + "");
+        lblO3S3.setText(oszlop3[2] + "");
+        lblO3S4.setText(oszlop3[1] + "");
+        lblO3S5.setText(oszlop3[0] + "");
+        lblO4S1.setText(oszlop4[4] + "");
+        lblO4S2.setText(oszlop4[3] + "");
+        lblO4S3.setText(oszlop4[2] + "");
+        lblO4S4.setText(oszlop4[1] + "");
+        lblO4S5.setText(oszlop4[0] + "");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -402,4 +439,15 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     private javax.swing.JPanel pnlO3;
     private javax.swing.JPanel pnlO4;
     // End of variables declaration//GEN-END:variables
+
+    private void szamKeveres(int[] hossz) {
+        Random rand = new Random();
+        for (int i = hossz.length - 1; i > 0; i--) {
+            int j = rand.nextInt(i + 1);
+            int temp = hossz[i];
+            hossz[i] = hossz[j];
+            hossz[j] = temp;
+        }
+    }
+
 }
