@@ -327,15 +327,48 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlO1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO1MouseReleased
-        lblAktivO1.setText(oszlop1[4] + "");
+        int[] oszlop1 = new int[]{
+            Integer.parseInt(lblO1S1.getText()),
+            Integer.parseInt(lblO1S2.getText()),
+            Integer.parseInt(lblO1S3.getText()),
+            Integer.parseInt(lblO1S4.getText()),
+            Integer.parseInt(lblO1S5.getText())
+        };
+        int i = 0;
+        while (oszlop1[i] == 0) {
+            i += 1;
+        }
+        lblAktivO1.setText(oszlop1[i] + "");
     }//GEN-LAST:event_pnlO1MouseReleased
 
     private void pnlO2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO2MouseReleased
-        lblAktivO2.setText(oszlop1[4] + "");
+        int[] oszlop2 = new int[]{
+            Integer.parseInt(lblO2S1.getText()),
+            Integer.parseInt(lblO2S2.getText()),
+            Integer.parseInt(lblO2S3.getText()),
+            Integer.parseInt(lblO2S4.getText()),
+            Integer.parseInt(lblO2S5.getText())
+        };
+        int i = 0;
+        while (oszlop2[i] == 0) {
+            i += 1;
+        }
+        lblAktivO2.setText(oszlop2[i] + "");
     }//GEN-LAST:event_pnlO2MouseReleased
 
     private void pnlO3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO3MouseReleased
-        lblAktivO3.setText(oszlop1[4] + "");
+        int[] oszlop3 = new int[]{
+            Integer.parseInt(lblO3S1.getText()),
+            Integer.parseInt(lblO3S2.getText()),
+            Integer.parseInt(lblO3S3.getText()),
+            Integer.parseInt(lblO3S4.getText()),
+            Integer.parseInt(lblO3S5.getText())
+        };
+        int i = 0;
+        while (oszlop3[i] == 0) {
+            i += 1;
+        }
+        lblAktivO3.setText(oszlop3[i] + "");
     }//GEN-LAST:event_pnlO3MouseReleased
 
     private void pnlO4ComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_pnlO4ComponentResized
@@ -343,7 +376,18 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlO4ComponentResized
 
     private void pnlO4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlO4MouseReleased
-        lblAktivO4.setText(oszlop1[4] + "");
+        int[] oszlop4 = new int[]{
+            Integer.parseInt(lblO4S1.getText()),
+            Integer.parseInt(lblO4S2.getText()),
+            Integer.parseInt(lblO4S3.getText()),
+            Integer.parseInt(lblO4S4.getText()),
+            Integer.parseInt(lblO4S5.getText())
+        };
+        int i = 0;
+        while (oszlop4[i] == 0) {
+            i += 1;
+        }
+        lblAktivO4.setText(oszlop4[i] + "");
     }//GEN-LAST:event_pnlO4MouseReleased
 
     private void btnKilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKilepesActionPerformed
