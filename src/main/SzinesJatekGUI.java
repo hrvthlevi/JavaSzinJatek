@@ -26,35 +26,223 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        pnlMegjelenites = new javax.swing.JPanel();
+        lblO3S4 = new javax.swing.JLabel();
+        lblO3S3 = new javax.swing.JLabel();
+        lblO2S4 = new javax.swing.JLabel();
+        lblO3S5 = new javax.swing.JLabel();
+        lblO4S5 = new javax.swing.JLabel();
+        lblO4S1 = new javax.swing.JLabel();
+        lblO4S3 = new javax.swing.JLabel();
+        lblO1S5 = new javax.swing.JLabel();
+        lblO1S3 = new javax.swing.JLabel();
+        lblO2S5 = new javax.swing.JLabel();
+        lblO2S2 = new javax.swing.JLabel();
+        lblO3S2 = new javax.swing.JLabel();
+        lblO4S4 = new javax.swing.JLabel();
+        lblLepesek = new javax.swing.JLabel();
+        lblO1S2 = new javax.swing.JLabel();
+        lblO2S3 = new javax.swing.JLabel();
+        lblO1S1 = new javax.swing.JLabel();
+        lblO4S2 = new javax.swing.JLabel();
+        lblO2S1 = new javax.swing.JLabel();
+        lblO1S4 = new javax.swing.JLabel();
+        lblO3S1 = new javax.swing.JLabel();
+        lblAktivO1 = new javax.swing.JLabel();
+        lblAktivO2 = new javax.swing.JLabel();
+        lblAktivO3 = new javax.swing.JLabel();
+        lblAktivO4 = new javax.swing.JLabel();
+        btnKilepes = new javax.swing.JButton();
+        btnUjJatek = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Színes golyók");
 
-        jButton1.setText("jButton1");
+        pnlMegjelenites.setBorder(javax.swing.BorderFactory.createTitledBorder("Megjelenítés"));
 
-        jButton2.setText("jButton2");
+        lblO3S4.setText("jLabel4");
+
+        lblO3S3.setText("jLabel3");
+
+        lblO2S4.setText("jLabel4");
+
+        lblO3S5.setText("jLabel5");
+
+        lblO4S5.setText("jLabel5");
+
+        lblO4S1.setText("jLabel1");
+
+        lblO4S3.setText("jLabel3");
+
+        lblO1S5.setText("jLabel5");
+
+        lblO1S3.setText("jLabel3");
+
+        lblO2S5.setText("jLabel5");
+
+        lblO2S2.setText("jLabel2");
+
+        lblO3S2.setText("jLabel2");
+
+        lblO4S4.setText("jLabel4");
+
+        lblLepesek.setText("Lépések: 0");
+
+        lblO1S2.setText("jLabel2");
+
+        lblO2S3.setText("jLabel3");
+
+        lblO1S1.setText("jLabel1");
+
+        lblO4S2.setText("jLabel2");
+
+        lblO2S1.setText("jLabel1");
+
+        lblO1S4.setText("jLabel4");
+
+        lblO3S1.setText("jLabel1");
+
+        lblAktivO1.setText("jLabel1");
+
+        lblAktivO2.setText("jLabel1");
+
+        lblAktivO3.setText("jLabel1");
+
+        lblAktivO4.setText("jLabel1");
+
+        javax.swing.GroupLayout pnlMegjelenitesLayout = new javax.swing.GroupLayout(pnlMegjelenites);
+        pnlMegjelenites.setLayout(pnlMegjelenitesLayout);
+        pnlMegjelenitesLayout.setHorizontalGroup(
+            pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createSequentialGroup()
+                .addContainerGap(99, Short.MAX_VALUE)
+                .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlMegjelenitesLayout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(lblLepesek))
+                    .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(pnlMegjelenitesLayout.createSequentialGroup()
+                            .addComponent(lblAktivO1)
+                            .addGap(28, 28, 28)
+                            .addComponent(lblAktivO2)
+                            .addGap(26, 26, 26)
+                            .addComponent(lblAktivO3)
+                            .addGap(27, 27, 27)
+                            .addComponent(lblAktivO4))
+                        .addGroup(pnlMegjelenitesLayout.createSequentialGroup()
+                            .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblO1S5)
+                                .addComponent(lblO1S4)
+                                .addComponent(lblO1S3)
+                                .addComponent(lblO1S2)
+                                .addComponent(lblO1S1))
+                            .addGap(28, 28, 28)
+                            .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblO2S5)
+                                .addComponent(lblO2S4)
+                                .addComponent(lblO2S3)
+                                .addComponent(lblO2S2)
+                                .addComponent(lblO2S1))
+                            .addGap(26, 26, 26)
+                            .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblO3S5)
+                                .addComponent(lblO3S4)
+                                .addComponent(lblO3S3)
+                                .addComponent(lblO3S2)
+                                .addComponent(lblO3S1))
+                            .addGap(27, 27, 27)
+                            .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblO4S5)
+                                .addComponent(lblO4S4)
+                                .addComponent(lblO4S3)
+                                .addComponent(lblO4S2)
+                                .addComponent(lblO4S1)))))
+                .addGap(87, 87, 87))
+        );
+        pnlMegjelenitesLayout.setVerticalGroup(
+            pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblAktivO4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblAktivO3)
+                    .addComponent(lblAktivO2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblAktivO1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(pnlMegjelenitesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createSequentialGroup()
+                        .addComponent(lblO4S1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO4S2)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO4S3)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO4S4)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO4S5))
+                    .addGroup(pnlMegjelenitesLayout.createSequentialGroup()
+                        .addComponent(lblO3S1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO3S2)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO3S3)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO3S4)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO3S5))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createSequentialGroup()
+                        .addComponent(lblO2S1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO2S2)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO2S3)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO2S4)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO2S5))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMegjelenitesLayout.createSequentialGroup()
+                        .addComponent(lblO1S1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO1S2)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO1S3)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO1S4)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblO1S5)))
+                .addGap(31, 31, 31)
+                .addComponent(lblLepesek)
+                .addGap(22, 22, 22))
+        );
+
+        btnKilepes.setText("Kilépés");
+
+        btnUjJatek.setText("Új játék");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(458, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnUjJatek)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnKilepes))
+                    .addComponent(pnlMegjelenites, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(pnlMegjelenites, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnKilepes)
+                    .addComponent(btnUjJatek))
+                .addGap(21, 21, 21))
         );
 
         pack();
@@ -97,7 +285,33 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnKilepes;
+    private javax.swing.JButton btnUjJatek;
+    private javax.swing.JLabel lblAktivO1;
+    private javax.swing.JLabel lblAktivO2;
+    private javax.swing.JLabel lblAktivO3;
+    private javax.swing.JLabel lblAktivO4;
+    private javax.swing.JLabel lblLepesek;
+    private javax.swing.JLabel lblO1S1;
+    private javax.swing.JLabel lblO1S2;
+    private javax.swing.JLabel lblO1S3;
+    private javax.swing.JLabel lblO1S4;
+    private javax.swing.JLabel lblO1S5;
+    private javax.swing.JLabel lblO2S1;
+    private javax.swing.JLabel lblO2S2;
+    private javax.swing.JLabel lblO2S3;
+    private javax.swing.JLabel lblO2S4;
+    private javax.swing.JLabel lblO2S5;
+    private javax.swing.JLabel lblO3S1;
+    private javax.swing.JLabel lblO3S2;
+    private javax.swing.JLabel lblO3S3;
+    private javax.swing.JLabel lblO3S4;
+    private javax.swing.JLabel lblO3S5;
+    private javax.swing.JLabel lblO4S1;
+    private javax.swing.JLabel lblO4S2;
+    private javax.swing.JLabel lblO4S3;
+    private javax.swing.JLabel lblO4S4;
+    private javax.swing.JLabel lblO4S5;
+    private javax.swing.JPanel pnlMegjelenites;
     // End of variables declaration//GEN-END:variables
 }
