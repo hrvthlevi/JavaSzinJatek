@@ -1,5 +1,6 @@
-
 package main;
+
+import javax.swing.JOptionPane;
 
 public class SzinesJatekGUI extends javax.swing.JFrame {
 
@@ -11,7 +12,7 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
     String[] oszlop2 = {"k", "k", "k", "-", "-"};
     String[] oszlop3 = {"z", "z", "z", "-", "-"};
     String[] oszlop4 = {"-", "-", "-", "-", "-"};
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -65,7 +66,7 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
 
         lblAktivO4.setText("jLabel1");
 
-        pnlO1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        pnlO1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlO1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 pnlO1MouseReleased(evt);
@@ -112,7 +113,7 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlO2.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        pnlO2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlO2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 pnlO2MouseReleased(evt);
@@ -159,7 +160,7 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlO3.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        pnlO3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlO3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 pnlO3MouseReleased(evt);
@@ -206,7 +207,7 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlO4.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        pnlO4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlO4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 pnlO4MouseReleased(evt);
@@ -312,6 +313,11 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
         getContentPane().add(pnlMegjelenites, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 29, -1, -1));
 
         btnKilepes.setText("Kilépés");
+        btnKilepes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKilepesActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnKilepes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 368, -1, -1));
 
         btnUjJatek.setText("Új játék");
@@ -341,6 +347,10 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
         lblLepesek.setText("4");
     }//GEN-LAST:event_pnlO4MouseReleased
 
+    private void btnKilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKilepesActionPerformed
+        kilepes();
+    }//GEN-LAST:event_btnKilepesActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -348,6 +358,14 @@ public class SzinesJatekGUI extends javax.swing.JFrame {
                 new SzinesJatekGUI().setVisible(true);
             }
         });
+    }
+
+    private void kilepes() {
+        int gombTipus = JOptionPane.YES_NO_OPTION;
+        int valasz = JOptionPane.showConfirmDialog(rootPane, "Biztos kilép?", "Kilépés", gombTipus);
+        if (valasz == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
